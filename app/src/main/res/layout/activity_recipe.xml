@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeActivity">
+
+    <FrameLayout
+        android:id="@+id/recipeActivity_nameFrame"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/gray" />
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/back_button"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+
+    <TextView
+        android:id="@+id/recipe_banner_title"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/recipeActivity_deleteRecipeButton"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/recipe"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/recipeActivity_instructionsFAB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        app:fab_colorNormal="@color/white"
+        app:fab_colorPressed="@color/darkWhite"
+        app:fab_icon="@drawable/ic_baseline_info_black"
+        app:fab_size="normal" />
+
+    <ImageView
+        android:id="@+id/recipeActivity_deleteRecipeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/delete_recipe"
+        android:src="@drawable/ic_baseline_delete_white" />
+
+    <Spinner
+        android:id="@+id/recipeActivity_recipeTagSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeActivity_nameFrame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/recipeActivity_addIngredientView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeActivity_recipeTagSpinner"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/recipeActivity_addIngredient_editText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autofillHints=""
+            android:background="@drawable/edit_text_white"
+            android:focusable="false"
+            android:fontFamily="sans-serif-smallcaps"
+            android:hint="@string/ingredientEditText"
+            android:inputType="textAutoComplete"
+            android:padding="10dp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/recipeActivity_addIngredientAmount_editText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@id/recipeActivity_addIngredient_editText"
+            android:autofillHints=""
+            android:background="@drawable/edit_text_white"
+            android:focusable="false"
+            android:fontFamily="sans-serif-smallcaps"
+            android:hint="@string/amount"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textAlignment="center" />
+
+
+    </RelativeLayout>
+
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/recipeActivity_addIngredientFAB"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/recipeActivity_addIngredientView"
+        android:layout_centerHorizontal="true"
+        app:fab_colorNormal="@color/lighter_gray"
+        app:fab_colorPressed="@color/gray"
+        app:fab_icon="@drawable/ic_baseline_add_white"
+        app:fab_size="mini"
+        app:fab_title="Add Ingredient" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipeActivity_ingredientsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/recipeActivity_addIngredientFAB"
+        android:layout_marginTop="2dp" />
+
+
+</RelativeLayout>

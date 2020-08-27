@@ -1,0 +1,2 @@
+rootProject.name='Preppy'
+include ':app'

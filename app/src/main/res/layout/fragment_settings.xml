@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/appNameText"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_preppy" />
+
+
+    <TextView
+        android:id="@+id/appNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/feedbackButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/preppy"
+        android:textSize="50sp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/feedbackButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sign_out_button"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/gray"
+        android:text="@string/send_feedback"
+        android:textColor="@color/white" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_out_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/gray"
+        android:text="@string/sign_out"
+        android:textColor="@color/white" />
+</RelativeLayout>

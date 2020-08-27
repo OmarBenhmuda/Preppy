@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/dialog_instructions_editText"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:autofillHints=""
+        android:layout_above="@id/dialog_instructions_doneButton"
+        android:hint="@string/instructions"
+        android:inputType="textMultiLine"
+        android:textColorHint="@color/darkWhite" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dialog_instructions_doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/gray"
+        android:text="@string/done"
+        app:cornerRadius="20dp" />
+
+
+
+</RelativeLayout>
+
+

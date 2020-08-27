@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#A3A3A3</color>
+    <color name="colorPrimaryDark">#8D393939</color>
+    <color name="colorAccent">#488165</color>
+    <color name="white">#FFFFFF</color>
+    <color name="darkWhite">#B4B4B4</color>
+    <color name="red">#F0EA3F3F</color>
+    <color name="orange">#D7E16D40</color>
+    <color name="blue">#DF7B8AEC</color>
+    <color name="yellow">#AEAEBA51</color>
+    <color name="green">#7BC569</color>
+    <color name="recipeGreen">#7BC569</color>
+    <color name="dark_green">#CC32853A</color>
+    <color name="weirdgreen">#523ECA34</color>
+    <color name="green_yellow">#68C5FF51</color>
+    <color name="gray">#1E1E2D</color>
+    <color name="lighter_gray">#2D2D46</color>
+    <color name="trans">#00000000</color>
+    <color name="translucent">#17969696</color>
+    <color name="black">#1E1E1E</color>
+    <color name="darkBlack">#0A0A0A</color>
+    <color name="titleColor">#8C8C8C</color>
+    <color name="hintColor">#505050</color>
+    <color name="darkRed">#862822</color>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "212761124353",
+    "firebase_url": "https://preppy-2aff8.firebaseio.com",
+    "project_id": "preppy-2aff8",
+    "storage_bucket": "preppy-2aff8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212761124353:android:48d0fe6435d0c7c1f42a00",
+        "android_client_info": {
+          "package_name": "com.preppyapp.preppy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212761124353-5ebdge8jbp5h07pr5e4fjrtmoos5vte6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.preppyapp.preppy",
+            "certificate_hash": "412370ce2871ca26519211484262edced5485e06"
+          }
+        },
+        {
+          "client_id": "212761124353-9jbgul2ar2fg6it0njqdeo71ju56c98r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClR5oOKsDEsF-BofRGUi1xOlZOFGBFvyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212761124353-9jbgul2ar2fg6it0njqdeo71ju56c98r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

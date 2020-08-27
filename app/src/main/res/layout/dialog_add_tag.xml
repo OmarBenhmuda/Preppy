@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+
+    <EditText
+        android:id="@+id/dialog_tag_tagEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_white"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="@string/add_tag"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textAlignment="center" />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/dialog_tag_addTagFAB"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dialog_tag_tagEditText"
+        android:layout_centerHorizontal="true"
+        app:fab_colorNormal="@color/lighter_gray"
+        app:fab_colorPressed="@color/gray"
+        app:fab_icon="@drawable/ic_baseline_add_white"
+        app:fab_size="mini"
+        app:fab_title="Add Ingredient" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dialog_tag_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/dialog_tag_addTagFAB"
+        android:layout_marginTop="10dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dialog_tag_saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_tag_recyclerView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/gray"
+        android:text="@string/save"
+        app:cornerRadius="20dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dialog_tag_cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_tag_recyclerView"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toStartOf="@id/dialog_tag_saveButton"
+        android:backgroundTint="@color/gray"
+        android:text="@string/cancel"
+        app:cornerRadius="20dp" />
+
+</RelativeLayout>
