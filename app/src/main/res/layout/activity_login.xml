@@ -8,28 +8,14 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/appNameText"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/logo"
-        android:scaleX="2"
-        android:scaleY="2"
-        android:layout_marginBottom="50dp"
-        android:src="@drawable/ic_preppy" />
-
-
-    <TextView
-        android:id="@+id/appNameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_above="@id/sign_in_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="@string/preppy"
-        android:textColor="@color/white"
-        android:textSize="70sp" />
+        android:contentDescription="@string/logo"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/ic_logo_white" />
+
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
