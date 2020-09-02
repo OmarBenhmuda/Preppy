@@ -20,11 +20,6 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.preppyapp.preppy.dialogs.InstructionsDialog;
-import com.preppyapp.preppy.holders.RecipeActivityIngredientsAdapter;
-import com.preppyapp.preppy.models.Ingredient;
-import com.preppyapp.preppy.models.Recipe;
-import com.preppyapp.preppy.models.Tags;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -39,6 +34,11 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.preppyapp.preppy.dialogs.InstructionsDialog;
+import com.preppyapp.preppy.holders.RecipeActivityIngredientsAdapter;
+import com.preppyapp.preppy.models.Ingredient;
+import com.preppyapp.preppy.models.Recipe;
+import com.preppyapp.preppy.models.Tags;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -122,10 +122,11 @@ public class RecipeActivity extends AppCompatActivity {
         tagRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
+                tags.add(0, "no tag");
                 if (documentSnapshot.exists()) {
                     Tags retrievedTags = documentSnapshot.toObject(Tags.class);
                     assert retrievedTags != null;
-                    tags = retrievedTags.getTags();
+                    tags.addAll(retrievedTags.getTags());
                     recipeTag = recipe.getRecipeTag();
 
                     spinnerIndex = tags.indexOf(recipeTag);

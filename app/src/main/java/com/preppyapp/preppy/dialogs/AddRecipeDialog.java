@@ -97,10 +97,11 @@ public class AddRecipeDialog extends AppCompatDialogFragment {
         tagRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
+                tags.add(0, "no tag");
                 if (documentSnapshot.exists()) {
                     Tags retrievedTags = documentSnapshot.toObject(Tags.class);
                     assert retrievedTags != null;
-                    tags = retrievedTags.getTags();
+                    tags.addAll(retrievedTags.getTags());
                 }
 
 

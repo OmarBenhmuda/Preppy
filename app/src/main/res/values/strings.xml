@@ -42,4 +42,5 @@
     <string name="logo">logo</string>
     <string name="send_feedback">send feedback</string>
     <string name="tag">tag</string>
+    <string name="tag_dialog">tag:</string>
 </resources>

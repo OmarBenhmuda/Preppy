@@ -47,6 +47,8 @@ public class RecipesFragment extends Fragment {
     private FirestoreRecyclerAdapter<Recipe, RecipeListViewHolder> adapter;
     private FirestoreRecyclerOptions<Recipe> fireStoreRecyclerOptions;
 
+    private AddTagDialog addTagDialog;
+
     private FirebaseFirestore rootRef = FirebaseFirestore.getInstance();
     private CollectionReference recipeListRef;
     DocumentReference tagRef;
@@ -95,7 +97,6 @@ public class RecipesFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> parentView) {
             }
         });
-
 
         Button addTagButton = v.findViewById(R.id.addTagButton);
         addTagButton.setOnClickListener(new View.OnClickListener() {
@@ -179,11 +180,12 @@ public class RecipesFragment extends Fragment {
         recyclerView.setAdapter(adapter);
     }
 
-
     public void openAddTagDialog() {
-        AddTagDialog addTagDialog = new AddTagDialog();
+        addTagDialog = new AddTagDialog();
+        onPause();
         addTagDialog.show(getParentFragmentManager(), "Add tag dialog");
     }
+
 
     public void attachSpinner() {
         tagRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -212,8 +214,12 @@ public class RecipesFragment extends Fragment {
         if (adapter != null) {
             adapter.startListening();
         }
+    }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        attachSpinner();
     }
 
     @Override

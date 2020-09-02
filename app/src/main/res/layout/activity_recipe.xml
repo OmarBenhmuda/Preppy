@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".RecipeActivity">
 
     <FrameLayout
@@ -82,7 +84,6 @@
             android:layout_margin="10dp"
             android:autofillHints=""
             android:background="@drawable/edit_text_white"
-            android:focusable="false"
             android:fontFamily="sans-serif-smallcaps"
             android:hint="@string/ingredientEditText"
             android:inputType="textAutoComplete"
@@ -97,7 +98,6 @@
             android:layout_toEndOf="@id/recipeActivity_addIngredient_editText"
             android:autofillHints=""
             android:background="@drawable/edit_text_white"
-            android:focusable="false"
             android:fontFamily="sans-serif-smallcaps"
             android:hint="@string/amount"
             android:inputType="text"
