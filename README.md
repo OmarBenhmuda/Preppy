@@ -2,9 +2,9 @@
 Repository for Preppy, an app that I launched to the Google PlayStore
 
 
-<p float="left">
+<p align="middle">
 <img src="Preppy%20Launch%20Items/Preppy%20Screenshots/Phone/Recipe%20List.png" width="200" height="354"/> 
 <img src="Preppy%20Launch%20Items/Preppy%20Screenshots/Phone/Ingredient%20List%20View.png" width="200" height="354"/> 
+<img src="Preppy%20Launch%20Items/Preppy%20Screenshots/Phone/Adding%20Ingreedients%20To%20Shopping%20List.png" width="200" height="354"/> 
+<img src="Preppy%20Launch%20Items/Preppy%20Screenshots/Phone/Recipe%20Instructions.png" width="200" height="354"/> 
 </p>
-
-
